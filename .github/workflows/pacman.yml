@@ -1,0 +1,35 @@
+name: Generate PacMan Animation
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Generate Pac-Man SVG
+        run: |
+          npx @platane/pacman \
+            --user shalz-collab \
+            --out ./output/pacman.svg
+
+      - name: Commit Pac-Man SVG
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/pacman.svg
+          git commit -m "Update Pac-Man animation" || true
+          git push
