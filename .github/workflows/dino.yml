@@ -10,27 +10,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - name: Generate placeholder SVG using snk
+      - name: Generate dummy SVG
         uses: Platane/snk@v3
         with:
           github_user_name: shalz-collab
           outputs: |
-            output/dummy.svg
+            output/temp.svg
 
       - name: Create output folder
         run: mkdir -p output
 
-      - name: Replace placeholder SVG with Dino animation
+      - name: Generate Dino SVG
         run: |
-          echo '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200">
-            <image href="https://raw.githubusercontent.com/shalz-mk-resources/dino-assets/main/dino-run.gif" width="800" height="200"/>
+          echo '<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200">
+            <image href="https://raw.githubusercontent.com/shalz-mk-resources/dino-assets/main/dino-run.gif" width="900" height="200"/>
           </svg>' > output/github-contribution-grid-dino.svg
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Update Dino Animation"
+          commit_user_name: github-actions
+          commit_user_email: github-actions@github.com
           branch: main
-          file_pattern:_
+          file_pattern: output/*.svg
