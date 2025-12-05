@@ -1,0 +1,42 @@
+name: Generate Games
+
+on:
+  schedule:
+    - cron: "0 */12 * * *" # every 12 hours
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Create output folder
+        run: mkdir -p output
+
+      # ---------------- PAC-MAN ---------------------
+      - name: Generate Pac-Man SVG
+        run: |
+          curl -o output/pacman.svg https://raw.githubusercontent.com/Platane/snk/output/examples/github-contribution-grid-snake.svg
+
+      # ----------------- DINO -----------------------
+      - name: Generate Dino SVG
+        run: |
+          curl -o output/dino.svg https://raw.githubusercontent.com/lowlighter/metrics/examples/metrics.plugin.isocalendar.svg
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@github.com"
+          git config --local user.name "github-actions[bot]"
+          git add output/*.svg
+          git commit -m "Updated Pac-Man & Dino SVG" || echo "No changes"
+          git push
