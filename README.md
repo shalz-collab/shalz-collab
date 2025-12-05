@@ -41,12 +41,11 @@ I believe in simple solutions, thoughtful design, and continuous improvement in 
 
 ---
 
-## 🐍 Contribution Snake
+## 🦖 Dino Runner (Chrome Offline Game)
 <p align="center">
-  
-![snake gif](https://raw.githubusercontent.com/shalz-collab/shalz-collab/output/github-contribution-grid-snake.svg)
-
+  <img src="https://i.imgur.com/4M7GG4p.gif" alt="Chrome Dino Game" width="750" />
 </p>
+
 
 ---
 
