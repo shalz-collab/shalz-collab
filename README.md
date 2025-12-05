@@ -43,8 +43,9 @@ I believe in simple solutions, thoughtful design, and continuous improvement in 
 
 ## 🦖 Contribution Dino
 <p align="center">
-  <img src="https://raw.githubusercontent.com/shalz-collab/shalz-collab/output/github-contribution-grid-dino.svg" />
+  <img src="https://raw.githubusercontent.com/shalz-collab/shalz-collab/main/output/github-contribution-grid-dino.svg" />
 </p>
+
 
 
 
