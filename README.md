@@ -1,5 +1,10 @@
-<h1 align="center">Hey there, I'm <strong>Shalz-collab</strong> ✨</h1>
-<h3 align="center">Developer • Builder • Learner</h3>
+<!-- Banner (optional) -->
+<p align="center">
+  <img src="YOUR_BANNER_LINK_HERE" alt="Shalz-collab banner" width="100%"/>
+</p>
+
+<h1 align="center"> Hey there, I'm <strong>Shalz-collab</strong> ✨</h1>
+<h3 align="center"> Developer </h3>
 
 <p align="center">
   <em>“Currently in the refactor phase — both in code and life.”</em>
@@ -7,66 +12,43 @@
 
 ---
 
-## 🧑‍💻 About Me  
-I focus on clean structure, meaningful design, and building things that actually work.  
-Always improving — in code, skills, and mindset.
+## About Me
+I believe in simple solutions, thoughtful design, and continuous improvement in everything I build.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
+<p align="center">
+  [![My Skills](https://skillicons.dev/icons?i=html,css,js,python,java,php,mysql,git,github,figma&theme=dark)](https://skillicons.dev)
+</p>
+
+---
+
+## 🎮 Fun Zone — Dino Runner
+<p align="center">
+  <!-- Chrome Dino animated GIF (recommended) -->
+  <img src="https://i.imgur.com/4M7GG4p.gif" alt="Chrome Dino Game" width="720" />
+</p>
+
+> Tip: This is an animated GIF that mimics the Chrome offline Dinosaur runner.
+
+---
+
+## 🐍 Contribution Snake
 <p align="center">
   
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,python,java,php,mysql,git,github,figma&theme=dark)](https://skillicons.dev)
+![snake gif](https://raw.githubusercontent.com/shalz-collab/shalz-collab/output/github-contribution-grid-snake.svg)
 
 </p>
 
 ---
 
-## 📊 GitHub Insights
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=shalz-collab&show_icons=true&theme=tokyonight&hide_border=true" height="180px"/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=shalz-collab&theme=tokyonight&hide_border=true" height="180px"/>
-
-</div>
-
----
-
-## 🟡 Pac-Man Contribution Graph  
+## GitHub Insights
 <p align="center">
-  <img src="https://raw.githubusercontent.com/shalz-collab/shalz-collab/main/output/pacman.svg" width="800px">
+  <img src="https://github-readme-stats.vercel.app/api?username=shalz-collab&show_icons=true&theme=tokyonight&hide_border=true" height="160px"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=shalz-collab&theme=tokyonight&hide_border=true" height="160px"/>
 </p>
 
 ---
 
-## 🦖 Dino Animation  
-<p align="center">
-  <img src="https://raw.githubusercontent.com/shalz-collab/shalz-collab/main/output/dino.svg" width="800px">
-</p>
-
----
-
-## 🏆 Achievements
-<p align="center">
-
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=shalz-collab&theme=tokyonight&no-frame=true&margin-w=10&margin-h=10)
-
-</p>
-
----
-
-## 🔗 Connect With Me  
-<p align="center">
-  <a href="https://www.linkedin.com/in/shalini-mk-b3b67b273">
-    <img src="https://skillicons.dev/icons?i=linkedin" width="45px"/>
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/shalz-collab">
-    <img src="https://skillicons.dev/icons?i=github" width="45px"/>
-  </a>
-</p>
-
----
-
-<h3 align="center">⭐ Thanks for visiting — happy coding!</h3>
+<h3 align="center">⭐ Thanks for visiting my profile — happy coding!</h3>
