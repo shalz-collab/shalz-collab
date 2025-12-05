@@ -19,26 +19,17 @@ I believe in simple solutions, thoughtful design, and continuous improvement in 
 
 ## Tech Stack
 <p align="center">
-  [![My Skills](https://skillicons.dev/icons?i=html,css,js,python,java,php,mysql,git,github,figma&theme=dark)](https://skillicons.dev)
+  <img src="https://skillicons.dev/icons?i=html,css,js,python,java,php,mysql,git,github,figma&theme=dark" />
 </p>
 
 ---
 
-## 🎮 Fun Zone — Dino Runner
-<p align="center">
-  <!-- Chrome Dino animated GIF (recommended) -->
-  <img src="https://i.imgur.com/4M7GG4p.gif" alt="Chrome Dino Game" width="720" />
-</p>
-
-> Tip: This is an animated GIF that mimics the Chrome offline Dinosaur runner.
 
 ---
 
 ## 🐍 Contribution Snake
 <p align="center">
-  
-![snake gif](https://raw.githubusercontent.com/shalz-collab/shalz-collab/output/github-contribution-grid-snake.svg)
-
+  <img src="https://raw.githubusercontent.com/shalz-collab/shalz-collab/output/github-contribution-grid-snake.svg" />
 </p>
 
 ---
