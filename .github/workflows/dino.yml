@@ -2,7 +2,7 @@ name: Generate Dino
 
 on:
   schedule:
-    - cron: "0 */12 * * *"  # every 12 hours
+    - cron: "0 */12 * * *"
   workflow_dispatch:
 
 jobs:
@@ -17,41 +17,47 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Create output folder
-        run: |
-          mkdir -p output
-          ls -la || true
+        run: mkdir -p output
 
-      - name: Generate dummy SVG (ensures file exists)
+      - name: Generate Animated Dino SVG
         run: |
-          cat > output/github-contribution-grid-dino.svg <<'SVG'
+          cat > output/github-contribution-grid-dino.svg << 'EOF'
           <svg xmlns="http://www.w3.org/2000/svg" width="900" height="200">
-            <rect width="900" height="200" fill="#0b0b0b"/>
-            <text x="50%" y="50%" fill="#cfcfcf" font-size="20" text-anchor="middle" dominant-baseline="middle">Generating Dino...</text>
+            <rect width="900" height="200" fill="#0d1117"/>
+
+            <!-- Ground -->
+            <rect y="150" width="900" height="10" fill="#5c5c5c"/>
+
+            <!-- Cactus -->
+            <rect x="600" y="110" width="20" height="40" fill="#4CAF50">
+              <animate attributeName="x" from="900" to="-30" dur="3s" repeatCount="indefinite"/>
+            </rect>
+
+            <!-- Dino -->
+            <g>
+              <rect id="body" x="80" y="110" width="40" height="40" fill="#ffffff"/>
+              <rect id="leg1" x="80" y="150" width="10" height="15" fill="#ffffff">
+                <animate attributeName="y" values="150;145;150" dur="0.3s" repeatCount="indefinite"/>
+              </rect>
+              <rect id="leg2" x="110" y="150" width="10" height="15" fill="#ffffff">
+                <animate attributeName="y" values="145;150;145" dur="0.3s" repeatCount="indefinite"/>
+              </rect>
+
+              <!-- Dino Jumping Animation -->
+              <animateTransform attributeName="transform"
+                                type="translate"
+                                values="0 0; 0 -40; 0 0"
+                                begin="1s"
+                                dur="0.6s"
+                                repeatCount="indefinite"/>
+            </g>
           </svg>
-          SVG
+          EOF
 
-      - name: Replace dummy with Dino SVG
-        run: |
-          cat > output/github-contribution-grid-dino.svg <<'SVG'
-          <svg xmlns="http://www.w3.org/2000/svg" width="900" height="200">
-            <rect width="900" height="200" fill="#0b0b0b"/>
-            <image href="https://raw.githubusercontent.com/shalz-mk-resources/dino-assets/main/dino-run.gif" width="900" height="200" preserveAspectRatio="xMidYMid slice" />
-          </svg>
-          SVG
-
-      - name: Show output (debug)
-        run: |
-          echo "Output files:"
-          ls -la output
-          echo "First lines of SVG:"
-          head -n 10 output/github-contribution-grid-dino.svg || true
-
-      - name: Commit and push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and Push SVG
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add output/github-contribution-grid-dino.svg
-          git commit -m "Update Dino SVG" || echo "No changes to commit"
-          git push origin HEAD:main || echo "Push failed or nothing to push"
+          git commit -m "Update Dino Animation" || echo "No changes"
+          git push
