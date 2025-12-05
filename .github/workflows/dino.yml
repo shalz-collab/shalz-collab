@@ -17,7 +17,10 @@ jobs:
         with:
           github_user_name: shalz-collab
           outputs: |
-            output/dino.svg
+            output/dummy.svg
+
+      - name: Create output folder
+        run: mkdir -p output
 
       - name: Replace placeholder SVG with Dino animation
         run: |
@@ -30,4 +33,4 @@ jobs:
         with:
           commit_message: "Update Dino Animation"
           branch: main
-          file_pattern: output/*.svg
+          file_pattern:_
