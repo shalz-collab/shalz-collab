@@ -7,8 +7,9 @@
 
 ---
 
-##  About Me
--I believe in simple solutions, thoughtful design, and continuous improvement in everything I build.
+## About Me
+I believe in simple solutions, thoughtful design, and continuous improvement in everything I build.
+
 ---
 
 ## Tech Stack
@@ -31,7 +32,7 @@
 
 ---
 
-## 🌱 Activity Graph
+## Activity Graph
 <p align="center">
   
 ![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=shalz-collab&theme=react-dark&hide_border=true)
@@ -43,13 +44,13 @@
 ## 🐍 Contribution Snake
 <p align="center">
   
-![snake gif](https://github.com/shalz-collab/shalz-collab/blob/output/github-contribution-grid-snake.svg)
+![snake gif](https://raw.githubusercontent.com/shalz-collab/shalz-collab/output/github-contribution-grid-snake.svg)
 
 </p>
 
 ---
 
-## 🏆 Achievements
+## Achievements
 <p align="center">
 
 ![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=shalz-collab&theme=tokyonight&no-frame=true&margin-w=10&margin-h=10)
@@ -58,7 +59,7 @@
 
 ---
 
-## 🔗 Connect With Me
+## Connect With Me
 
 <p align="center">
   <a href="https://www.linkedin.com/in/shalini-mk-b3b67b273">
