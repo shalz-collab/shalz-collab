@@ -1,9 +1,5 @@
-<!-- Banner (optional) -->
-<p align="center">
-  <img src="YOUR_BANNER_LINK_HERE" alt="Shalz-collab banner" width="100%"/>
-</p>
 
-<h1 align="center"> Hey there, I'm <strong>Shalz-collab</strong> ✨</h1>
+<h1 align="center"> Hey there, I'm <strong>SHALINI MUTHUKUMAR </strong> </h1>
 <h3 align="center"> Developer </h3>
 
 <p align="center">
