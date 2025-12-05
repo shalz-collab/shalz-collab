@@ -1,0 +1,27 @@
+name: Generate Dino
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # Runs every 12 hours
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate Dino Animation
+        uses: Platane/dino@v1
+        with:
+          github_user_name: shalz-collab
+          output: github-contribution-grid-dino.svg
+
+      - name: Push generated files
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update Dino animation"
+          branch: main
+          file_pattern: "*.svg"
