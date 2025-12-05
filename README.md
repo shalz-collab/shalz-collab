@@ -32,18 +32,17 @@ I believe in simple solutions, thoughtful design, and continuous improvement in 
 
 ---
 
-## Activity Graph
+## 🟡 Pac-Man Contribution Graph
 <p align="center">
-  
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=shalz-collab&theme=react-dark&hide_border=true)
-
+  <img src="https://raw.githubusercontent.com/shalz-collab/shalz-collab/main/output/pacman.svg">
 </p>
+
 
 ---
 
-## 🦖 Contribution Dino
+##  Dino Animation
 <p align="center">
-  <img src="https://raw.githubusercontent.com/shalz-collab/shalz-collab/main/output/github-contribution-grid-dino.svg" />
+  <img src="https://raw.githubusercontent.com/shalz-collab/shalz-collab/main/output/dino.svg">
 </p>
 
 
