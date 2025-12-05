@@ -41,10 +41,11 @@ I believe in simple solutions, thoughtful design, and continuous improvement in 
 
 ---
 
-## 🦖 Dino Runner (Chrome Offline Game)
+## 🦖 Contribution Dino
 <p align="center">
-  <img src="https://i.imgur.com/4M7GG4p.gif" alt="Chrome Dino Game" width="750" />
+  <img src="https://raw.githubusercontent.com/shalz-collab/shalz-collab/output/github-contribution-grid-dino.svg" />
 </p>
+
 
 
 ---
