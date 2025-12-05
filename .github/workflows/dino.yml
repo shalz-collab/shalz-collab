@@ -1,27 +1,33 @@
-name: Generate Dino
+name: Generate Dino Animation
 
 on:
   schedule:
-    - cron: "0 */12 * * *"   # Runs every 12 hours
+    - cron: "0 */12 * * *"
   workflow_dispatch:
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Generate Dino Animation
-        uses: Platane/dino@v1
+      - name: Generate placeholder SVG using snk
+        uses: Platane/snk@v3
         with:
           github_user_name: shalz-collab
-          output: github-contribution-grid-dino.svg
+          outputs: |
+            output/dino.svg
 
-      - name: Push generated files
+      - name: Replace placeholder SVG with Dino animation
+        run: |
+          echo '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200">
+            <image href="https://raw.githubusercontent.com/shalz-mk-resources/dino-assets/main/dino-run.gif" width="800" height="200"/>
+          </svg>' > output/github-contribution-grid-dino.svg
+
+      - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Update Dino animation"
+          commit_message: "Update Dino Animation"
           branch: main
-          file_pattern: "*.svg"
+          file_pattern: output/*.svg
