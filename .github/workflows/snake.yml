@@ -1,27 +1,49 @@
 name: Generate Snake
 
+# allow manual runs + scheduled runs
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 */12 * * *"
-  workflow_dispatch:
+
+# allow this workflow to push files
+permissions:
+  contents: write
+  pages: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout repository (full)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
 
-      - name: Generate Snake Animation
-        uses: Platane/snk@v3
+      - name: Set up Node (required by snk action)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Generate Snake Animation (Platane snk)
+        uses: Platane/snk@v5
         with:
           github_user_name: shalz-collab
+          # outputs path(s) to produce
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake.gif
 
-      - name: Push Snake to Output Branch
+      - name: Show generated files (debug)
+        run: |
+          echo "---- LIST dist ----"
+          ls -la dist || true
+          echo "---- FILES ----"
+          find dist -maxdepth 1 -type f -print -exec file {} \; || true
+
+      - name: Deploy to output branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
