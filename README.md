@@ -38,4 +38,5 @@ I believe in simple solutions, thoughtful design, and continuous improvement in 
 
 ---
 
-<h3 align="center">⭐ Thanks for visiting my profile — happy coding!</h3>
+<h3 align="center">merci
+</h3>
